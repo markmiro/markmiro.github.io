@@ -10,5 +10,8 @@
   "bugs": {
     "url": "https://github.com/markmiro/markmiro.github.io/issues"
   },
-  "homepage": "http://markmiro.com"
+  "homepage": "http://markmiro.com",
+  "devDependencies": {
+    "wintersmith": "^2.1.0"
+  }
 }
