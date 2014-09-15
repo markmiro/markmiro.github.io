@@ -9,4 +9,4 @@ Hello!
 
 [![Code Health](https://landscape.io/github/markmiro/markmiro.github.io/master/landscape.png)](https://landscape.io/github/markmiro/markmiro.github.io/master)
 
-[![Dependency David](https://david-dm.org/markmiro/markmiro.github.io.png)](https://david-dm.org/markmiro/markmiro.github.io.png)
+[![Dependency David](https://david-dm.org/markmiro/markmiro.github.io.png)](https://github.com/markmiro/markmiro.github.io)
