@@ -14,7 +14,6 @@
   "homepage": "http://markmiro.com",
   "devDependencies": {
     "browser-sync": "^1.4.0",
-    "gulp": "^3.8.8",
-    "wintersmith": "^2.1.0"
+    "gulp": "^3.8.8"
   }
 }
