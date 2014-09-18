@@ -28,7 +28,7 @@ gulp.task('browser-sync', function () {
 var deploy = require("gulp-gh-pages");
 var options = { 
     remoteUrl: "https://github.com/markmiro/markmiro.github.io.git",
-    branch: "dist"};
+    branch: "master"};
 gulp.task('deploy', function () {
     gulp.src("dist/**/*")
         .pipe(deploy(options));
