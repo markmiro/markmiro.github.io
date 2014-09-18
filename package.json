@@ -14,6 +14,7 @@
   "homepage": "http://markmiro.com",
   "devDependencies": {
     "browser-sync": "^1.4.0",
-    "gulp": "^3.8.8"
+    "gulp": "^3.8.8",
+    "gulp-clean": "^0.3.1"
   }
 }

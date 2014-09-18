@@ -1,8 +1,12 @@
 var gulp = require('gulp'),
-    browserSync = require('browser-sync');
+    browserSync = require('browser-sync'),
+    clean = require('gulp-clean');
 
 gulp.task('default', function() {
-    // place code for your default task here
+    gulp.src('dist', {read: false})
+        .pipe(clean());
+    gulp.src('src/**/*')
+        .pipe(gulp.dest('dist'));
 });
 
 gulp.task('browser-sync', function () {
