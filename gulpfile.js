@@ -3,6 +3,7 @@ var gulp = require('gulp'),
     clean = require('gulp-clean');
 
 gulp.task('default', function() {
+    console.log('Update ' + new Date().toISOString() + ' -–skip-ci');
     gulp.src('dist', {read: false})
         .pipe(clean());
     gulp.src('src/**/*')
