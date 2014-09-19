@@ -38,15 +38,15 @@ gulp.task('build-js', function () {
 
 gulp.task('browser-sync', function () {
     var files = [
-            '*.html',
-            'dist/css/**/*.css',
-            'dist/**/*.js'
+        '*.html',
+        'dist/css/**/*.css',
+        'dist/**/*.js'
     ];
 
     browserSync.init(files, {
-            server: {
-                 baseDir: 'dist'
-            }
+        server: {
+             baseDir: 'dist'
+        }
     });
 });
 
