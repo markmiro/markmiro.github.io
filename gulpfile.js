@@ -26,7 +26,7 @@ gulp.task('browser-sync', function () {
 
 
 var deploy = require("gulp-gh-pages");
-var options = { 
+var options = {
     branch: "master"};
 gulp.task('deploy', function () {
     gulp.src("dist/**/*")
