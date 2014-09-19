@@ -1,13 +1,26 @@
 var gulp = require('gulp'),
     browserSync = require('browser-sync'),
-    clean = require('gulp-clean');
+    clean = require('gulp-clean'),
+    jade = require('gulp-jade');
 
 gulp.task('default', function() {
-    process.stdout.write('Update ' + new Date().toISOString() + ' -–skip-ci\n');
+    var LOCALS = {};
+
     gulp.src('dist', {read: false})
         .pipe(clean());
-    gulp.src('src/**/*')
-        .pipe(gulp.dest('dist'));
+
+    gulp.src('src/**/*.jade')
+        .pipe(jade({ locals: LOCALS }))
+        .pipe(gulp.dest('dist'))
+
+    gulp.src('src/**/*.js')
+        .pipe(gulp.dest('dist'))
+
+    gulp.src('src/CNAME')
+        .pipe(gulp.dest('dist'))
+
+    // gulp.src('src/**/*')
+    //     .pipe(gulp.dest('dist'));
 });
 
 gulp.task('browser-sync', function () {
