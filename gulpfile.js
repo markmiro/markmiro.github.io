@@ -25,7 +25,7 @@ gulp.task('browser-sync', function () {
 });
 
 
-var deploy = require("gulp-gh-pages");
+var deploy = require("gulp-gh-pages-ci-compatible");
 var options = {
     branch: "master"};
 gulp.task('deploy', function () {
