@@ -3,7 +3,7 @@ var gulp = require('gulp'),
     clean = require('gulp-clean');
 
 gulp.task('default', function() {
-    console.log('Update ' + new Date().toISOString() + ' -–skip-ci');
+    process.stdout.write('Update ' + new Date().toISOString() + ' -–skip-ci\n');
     gulp.src('dist', {read: false})
         .pipe(clean());
     gulp.src('src/**/*')
@@ -28,7 +28,9 @@ gulp.task('browser-sync', function () {
 
 var deploy = require("gulp-gh-pages-ci-compatible");
 var options = {
-    branch: "master"};
+    message: 'Update ' + new Date().toISOString() + ' [skip ci]',
+    branch: "master"
+};
 gulp.task('deploy', function () {
     gulp.src("dist/**/*")
         .pipe(deploy(options));
