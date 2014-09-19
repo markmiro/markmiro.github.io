@@ -1,6 +1,7 @@
 var gulp = require('gulp'),
     browserSync = require('browser-sync'),
     clean = require('gulp-clean'),
+    sass = require('gulp-sass'),
     jade = require('gulp-jade');
 
 gulp.task('default', function() {
@@ -15,6 +16,10 @@ gulp.task('default', function() {
 
     gulp.src('src/**/*.js')
         .pipe(gulp.dest('dist'))
+
+    gulp.src('src/scss/**/*.scss')
+        .pipe(sass())
+        .pipe(gulp.dest('dist/styles'))
 
     gulp.src('src/CNAME')
         .pipe(gulp.dest('dist'))
