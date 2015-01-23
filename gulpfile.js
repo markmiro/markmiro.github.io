@@ -75,12 +75,12 @@ gulp.task('build', function (callback) {
 gulp.task('default', ['build']);
 
 
-var deploy = require("gulp-gh-pages-ci-compatible");
+var deploy = require('gulp-gh-pages');
 var options = {
     message: 'Update ' + new Date().toISOString() + ' [skip ci]',
-    branch: "master"
+    branch: 'master'
 };
 gulp.task('deploy', ['build'], function () {
-    gulp.src("dist/**/*")
+    gulp.src('dist/**/*')
         .pipe(deploy(options));
 });
