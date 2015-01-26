@@ -1,0 +1,7 @@
+include _mixins
+div.header
+    h1= 'CURRENT_PAGE: ' + CURRENT_PAGE
+    ul
+        li: +link('portfolio') Projects
+        li: +link('about') About
+        li: +link('contact') Contact

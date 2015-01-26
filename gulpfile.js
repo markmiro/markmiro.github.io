@@ -4,13 +4,15 @@ var gulp = require('gulp'),
     clean = require('gulp-rimraf'),
     sass = require('gulp-sass'),
     colorguard = require('gulp-colorguard'),
+    rename = require('gulp-rename'),
     jade = require('gulp-jade');
 
 
 
 
 var SRC = {
-    JADE: 'src/**/*.jade',
+    JADE: 'src/jade/*.jade',
+    JADE_WATCH: 'src/**/*.jade',
     JS: 'src/**/*.js',
     SASS: 'src/scss/**/*.scss'
 };
@@ -20,6 +22,10 @@ gulp.task('build-jade', function () {
 
     return gulp.src(SRC.JADE)
         .pipe(jade({ locals: LOCALS }))
+        .pipe(rename(function (path) {
+            if (path.basename !== 'index') path.dirname += '/' + path.basename;
+            path.basename = 'index';
+        }))
         .pipe(gulp.dest('dist'))
         .pipe(browserSync.reload({ stream:true }));
 });
@@ -51,7 +57,7 @@ gulp.task('browser-sync', function () {
 });
 
 gulp.task('watch', ['browser-sync', 'build'], function () {
-    gulp.watch(SRC.JADE, ['build-jade']);
+    gulp.watch(SRC.JADE_WATCH, ['build-jade']);
     gulp.watch(SRC.SASS, ['build-sass']);
     gulp.watch(SRC.JS, ['build-js']);
 });
