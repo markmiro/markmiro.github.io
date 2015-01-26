@@ -3,7 +3,7 @@ mixin page(name, title)
     doctype html
     html
         head
-            link(href='/css/styles.css' rel='stylesheet')
+            link(href=ROOT+'css/styles.css' rel='stylesheet')
         body
             include _header
             h1= title

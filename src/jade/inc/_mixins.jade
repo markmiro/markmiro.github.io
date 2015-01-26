@@ -1,5 +1,5 @@
 - var CURRENT_PAGE
 
 mixin link(name)
-  a(href='/'+name, class=CURRENT_PAGE==name?'active':'')
+  a(href=ROOT+name, class=CURRENT_PAGE==name?'active':'')
     block

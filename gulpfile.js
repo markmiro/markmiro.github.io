@@ -18,7 +18,9 @@ var SRC = {
 };
 
 gulp.task('build-jade', function () {
-    var LOCALS = {};
+    var LOCALS = {
+        ROOT: '/'
+    };
 
     return gulp.src(SRC.JADE)
         .pipe(jade({ locals: LOCALS }))
