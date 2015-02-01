@@ -65,17 +65,17 @@ $(function () {
         var $currentProject = $(event.target).closest('.project');
         $.scrollTo($currentProject, 200);
         if ($currentProject.find('.product-shot.active').index() == 0) {
-            $currentProject.closest('.orbit-container').find('.orbit-prev').addClass('hidden');
+            $currentProject.closest('.orbit-container').find('.orbit-prev').addClass('hidden');  
             $currentProject.closest('.orbit-container').find('.orbit-next').addClass('big-arrow');
         } else {
-            $currentProject.closest('.orbit-container').find('.orbit-prev').removeClass('hidden');
+            $currentProject.closest('.orbit-container').find('.orbit-prev').removeClass('hidden');  
             $currentProject.closest('.orbit-container').find('.orbit-next').removeClass('big-arrow');
         }
     });
 
     var $currentProject = $('.project');
     if ($currentProject.find('.product-shot.active').index() == 0) {
-        $currentProject.closest('.orbit-container').find('.orbit-prev').addClass('hidden');
+        $currentProject.closest('.orbit-container').find('.orbit-prev').addClass('hidden');  
         $currentProject.closest('.orbit-container').find('.orbit-next').addClass('big-arrow');
     }
 
