@@ -17,19 +17,116 @@
     <meta name="msapplication-TileImage" content="/images/touch/ms-touch-icon-144x144-precomposed.png">
     <meta name="msapplication-TileColor" content="#3372DF">
     <meta name="theme-color" content="#3372DF">
-    <link rel="stylesheet" href="/styles/main.css">
+    <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400">
+    <link rel="stylesheet" href="/styles/app.css">
+    <!--if lt IE 9
+    script(src='http://html5shiv.googlecode.com/svn/trunk/html5.js')
+    
+    -->
+    <script src="/scripts/modernizr.min.js"></script>
   </head>
   <body>
-    <nav>
-      <p>CURRENT_PAGE: about</p>
-      <ul>
-        <li><a href="/">Home</a>
-        </li>
-        <li><a href="/about">About</a>
-        </li>
-      </ul>
-    </nav>
-    <p>This is the about page.</p>
+    <header class="header2">
+      <div class="content"><a href="/">
+          <div class="title">Mark Miro</div>
+          <div class="sub-title show-for-medium-only">Developer / designer</div>
+          <div class="sub-title show-for-large-up">Front-end web app developer / designer</div></a>
+        <nav>
+          <ul>
+            <li><a href="/">Projects</a>
+            </li>
+            <li><a href="/labs">Labs</a>
+            </li>
+            <li><a href="/about">About</a>
+            </li>
+            <li><a href="/mailto:contact@markmiro.com">Contact Me</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <div id="content" class="about-page">
+      <div class="why">
+        <div class="stuff">
+          <h2>About</h2>
+          <p>I'm a front-end developer who has built innovative functional prototypes for Intel, Dell, Lenovo, etc... These prototypes incorporate the latest gesture (think Kinect), touch, and voice recognition technology. I also have a patent with my name on it (in the works).</p>
+          <div class="toggle-block">
+            <h4>Learn one thing and do it well<small>So why am I doing two again?</small></h4>
+            <p>Great innovations happen when knowledge from one discipline gets carried over to another. In my case I've decided to focus on fusing code and design. This, I was able to get good at by being a basement code monkey since middle school and practicing both crafts.</p>
+            <p>Everything else was secondary, so naturally I lacked royally in the social relm. Don't worry; I adjusted later in life. So, if you're looking for a sharp non-tool who can code and design, I'm your guy.</p>
+            <h4>What does it really mean to be a coder / designer?</h4>
+            <p>It means I need to be somewhat particular about what I want to be good at. My goal is not to be the proverbial jack of all trades. I'm skilled in Photoshop and Illustrator. But that doesn't mean I'll be the best at poster or logo design.</p>
+            <p>On the other hand, just becase I can code doesn't mean I'm an expert in databases and computer security. I know the basics.</p>
+            <h4>So what <em>am</em> I good at?</h4>
+            <p>I can anticipate where users will have problems using your app. I can also come up with non-confusing alternatives, and&mdash;importantly&mdash;implement them. I can see past how an app looks, and know how to make it functional. Simultaneously, I'm naturally detail oriented.</p>
+            <p>One more thing... I like experimental user interfaces. Most of them confuse users or scare them away from a product (think Windows 8), but once in a while something like the iPod click wheel comes along and changes everything. I like to explore those edge cases, and being able to code means I can test my ideas. So what do you get by working with me? Innovation at the speed of thought. Believe the hype.</p>
+          </div><a class="toggle-link">more...</a>
+        </div>
+      </div>
+      <div class="about-me">
+        <div class="we-will-get-along">
+          <h3>My favorite companies / clients...</h3>
+          <ul>
+            <li>Are building customer-facing products</li>
+            <li>Need innovative user interfaces</li>
+            <li>Love simple, flat design</li>
+            <li>Are strong proponents of visual consistency</li>
+            <li>Appreciate clean code</li>
+            <li>Do market research before starting work on a solution</li>
+          </ul>
+        </div>
+        <div class="skills">
+          <h3>Core skills</h3>
+          <div class="skill-column">
+            <h4>JS</h4>
+            <ul>
+              <li>jQuery</li>
+              <li>Backbone</li>
+              <li>Require.js</li>
+              <li>Grunt</li>
+              <li>Bower</li>
+              <li>Node</li>
+            </ul>
+          </div>
+          <div class="skill-column">
+            <h4>CSS</h4>
+            <ul>
+              <li>Responsive design</li>
+              <li>Media queries</li>
+              <li>Sass</li>
+              <li>LESS</li>
+            </ul>
+          </div>
+          <div class="skill-column">
+            <h4>HTML5</h4>
+            <ul>
+              <li>Jade</li>
+              <li>HAML</li>
+            </ul>
+          </div>
+          <div class="skill-column"></div>
+        </div>
+        <div class="clearfix"></div>
+        <div class="more-skills">
+          <h3>Additional skills</h3>
+          <ul>
+            <li>Objective-C</li>
+            <li>C#</li>
+            <li>Java</li>
+            <li>ActionScript 3</li>
+            <li>Ruby</li>
+            <li>Python</li>
+            <li>PHP</li>
+            <li>Regular Expressions</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <footer class="footer">
+      <p>&copy;2015&nbsp; Mark Miro
+      </p>
+    </footer>
+    <script src="/scripts/vendor.min.js"></script>
     <script src="/scripts/main.min.js"></script>
   </body>
 </html>
