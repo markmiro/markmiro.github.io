@@ -188,7 +188,7 @@ gulp.task('build', function (cb) {
 
 var options = {
     message: 'Update ' + new Date().toISOString() + ' [skip ci]',
-    branch: 'gh-pages'
+    branch: 'master'
 };
 gulp.task('deploy', ['default'], function () {
   return gulp.src('dist/**/*')
