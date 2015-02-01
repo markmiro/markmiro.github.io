@@ -23,12 +23,12 @@ mixin vertical-iphone(screenshot)
     .v-center-container
       .v-center
         .device.iphone-5s-flat-vertical
-          img(src='img/'+screenshot)
+          img(src='/images/'+screenshot)
 
 mixin intro-vertical-iphone(screenshot)
   +vertical-iphone(screenshot)
   .intro-device-container.visible-for-small-only
-    img(src='img/'+screenshot)
+    img(src='/images/'+screenshot)
 
 
 mixin horizontal-ipad(screenshot)
@@ -36,19 +36,19 @@ mixin horizontal-ipad(screenshot)
     .v-center-container
       .v-center
         .device.ipad-flat-horizontal
-          img(src='img/'+screenshot)
+          img(src='/images/'+screenshot)
 
 mixin intro-horizontal-ipad(screenshot)
   +horizontal-ipad(screenshot)
   .intro-wide-device-container.visible-for-small-only
-    img(src='img/'+screenshot)
+    img(src='/images/'+screenshot)
 
 mixin horizontal-ipad-small(screenshot)
   .device.ipad-flat-horizontal-small
-    img(src='img/'+screenshot)
+    img(src='/images/'+screenshot)
 
 mixin project-logo(logo)
-  img.logo(src='img/'+logo)
+  img.logo(src='/images/'+logo)
 
 mixin description()
   .description
