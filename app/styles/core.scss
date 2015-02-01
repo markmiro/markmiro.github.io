@@ -1,0 +1,76 @@
+@import "foundation/components/grid";
+
+// The core consists of six components:
+// 1. Reset
+// Standard Normalize.css reset.
+
+// 2. Settings
+// @font-face and global variables.
+
+// 3. Helpers
+// Extends, functions, mixins, keyframe animations.
+
+// 4. Base
+// Base-level tags.
+
+// 5. Content
+// Base-level typography (colors, fonts).
+
+// 6. Layout
+// Base-level layout (margin, padding, sizing).
+
+
+
+
+
+$black: #000;
+$main-color: #555;
+$secondary-color: #888;
+$light-gray: #bbb;
+$off-white: #eee;
+
+$blue: hsl(210deg, 58%, 47%);
+$red: hsl(4deg, 60%, 56%);
+
+$content-width: 450px;
+$slide-arrow-width: 3rem;
+$min-page-padding: 1rem;
+$content-top-offset: 4rem;
+$content-clearance: 3rem;
+$row-width-down: "screen and (max-width: #{$row-width + $slide-arrow-width*2})";
+
+// ------
+
+body {
+
+}
+
+html, body {
+    // max-width: 100%;
+    // overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 400;
+    color: $main-color;
+    small {
+        display: block;
+        line-height: 1.25;
+        color: $secondary-color;
+    }
+}
+
+h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+
+hr {
+    border-color: $light-gray;
+}
+
+h1, h2 {
+    // font-weight: 900;
+}

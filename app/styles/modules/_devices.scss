@@ -1,0 +1,249 @@
+@mixin device(
+    $image,
+    $scale,
+    $orig-width,
+    $orig-height,
+    $orig-x-offset-content,
+    $orig-y-offset-content,
+    $orig-screen-width)
+    {
+    background-repeat: no-repeat;
+    background-size: 100%;
+    display: inline-block;
+    position: relative;
+
+    @media #{$medium-up} {
+        $width:         $scale * $orig-width;
+        $height:        $scale * $orig-height;
+        $left:          $scale * $orig-x-offset-content;
+        $top:           $scale * $orig-y-offset-content;
+        $screen-width:  $scale * $orig-screen-width;
+        background-image: $image;
+        width: $width/2;
+        height: $height/2;
+        img {
+            width: $screen-width/2;
+            top: $top/2;
+            left: $left/2;
+            display: block;
+            position: absolute;
+        }
+    }
+}
+
+@mixin iphone(
+    $image,
+    $scale,
+    $orig-width, $orig-height,
+    $orig-x-offset-content, $orig-y-offset-content)
+    {
+
+    @include device(
+        $image,
+        $scale,
+        $orig-width, $orig-height,
+        $orig-x-offset-content, $orig-y-offset-content,
+        640px);
+    
+    @media #{$small-only} {
+        $size: 20px;
+        $vertical-bezel-size: 40px;
+
+        border: 8px solid $off-white;
+        border-top-width: $vertical-bezel-size;
+        border-bottom-width: $vertical-bezel-size;
+        border-radius: 12px;
+        z-index: 100;
+
+        &:before {
+            $width: 40px;
+            z-index: 200;
+            content: "";
+            display: block;
+            position: absolute;
+            width: $width;
+            height: 6px;
+            margin-left: -$width/2;
+            top: -22px;
+            left: 50%;
+            border-radius: 999px;
+            border: 1px solid $light-gray;
+        }
+
+        &:after {
+            content: "";
+            display: block;
+            position: absolute;
+            width: $size;
+            height: $size;
+            margin-left: -$size/2;
+            bottom: -10px - $size;
+            left: 50%;
+            border-radius: 999px;
+            border: 1px solid $light-gray;
+        }
+        img {
+            position: relative;
+            width: 200px;
+            outline: 1px solid $main-color;
+        }
+    }
+
+}
+
+.iphone-5s-vertical {
+    @include iphone(
+        img("iphone-5s-black-vertical"),
+        0.85,
+        763px, 1602px,
+        65px, 237px);
+}
+
+.iphone-5s-flat-vertical {
+    @media #{$small-only} {
+        // $size: 20px;
+        // $vertical-bezel-size: 40px;
+
+        // border: 8px solid $off-white;
+        // border-top-width: $vertical-bezel-size;
+        // border-bottom-width: $vertical-bezel-size;
+        // border-radius: 20px;
+        // z-index: 100;
+
+        // &:before {
+        //     $width: 40px;
+        //     z-index: 200;
+        //     content: "";
+        //     display: block;
+        //     position: absolute;
+        //     width: $width;
+        //     height: 6px;
+        //     margin-left: -$width/2;
+        //     top: -22px;
+        //     left: 50%;
+        //     border-radius: 999px;
+        //     border: 1px solid $light-gray;
+        // }
+
+        // &:after {
+        //     content: "";
+        //     display: block;
+        //     position: absolute;
+        //     width: $size;
+        //     height: $size;
+        //     margin-left: -$size/2;
+        //     bottom: -10px - $size;
+        //     left: 50%;
+        //     border-radius: 999px;
+        //     border: 1px solid $light-gray;
+        // }
+        img {
+            position: relative;
+            // width: 200px;
+            outline: 1px solid $main-color;
+        }
+    }
+    @media #{$medium-only} {
+        @include iphone(
+            img("iphone-5s-flat-black-vertical-3"),
+            0.70,
+            760px, 1600px,
+            62px, 235px);
+    }
+    @media #{$large-up} {
+        @include iphone(
+            img("iphone-5s-flat-black-vertical-3"),
+            0.90,
+            760px, 1600px,
+            62px, 235px);
+    }
+}
+
+
+.iphone-5-vertical {
+    @include iphone(
+        img("iphone-5-black-vertical"),
+        0.85,
+        758px, 1605px,
+        62px, 234px);
+}
+
+.ipad-horizontal {
+    @include device(
+        img("ipad-black-horizontal"),
+        0.70,
+        2503px, 1766px,
+        227px, 115px,
+        2048px);
+    @media #{$small-only} {
+        $size: 10px;
+        $vertical-bezel-size: 24px;
+
+        border: 14px solid $off-white;
+        border-left-width: $vertical-bezel-size;
+        border-right-width: $vertical-bezel-size;
+        border-radius: 8px;
+        z-index: 100;
+
+        &:before {
+            $width: 5px;
+            z-index: 200;
+            content: "";
+            display: block;
+            position: absolute;
+            width: $width;
+            height: $width;
+            margin-top: -$width/2;
+            left: -14px;
+            top: 50%;
+            border-radius: 999px;
+            border: 1px solid $secondary-color;
+        }
+
+        &:after {
+            content: "";
+            display: block;
+            position: absolute;
+            width: $size;
+            height: $size;
+            margin-top: -$size/2;
+            right: -7px - $size;
+            top: 50%;
+            border-radius: 999px;
+            border: 1px solid $secondary-color;
+        }
+        img {
+            position: relative;
+            width: 300px;
+            outline: 1px solid $main-color;
+        }
+    }
+}
+
+.ipad-flat-horizontal {
+    @media #{$medium-only} {
+        @include device(
+            img("ipad-flat-black-horizontal"),
+            0.60,
+            2508px, 1692px,
+            232px, 84px,
+            2048px);
+    }
+    @media #{$large-up} {
+        @include device(
+            img("ipad-flat-black-horizontal"),
+            0.80,
+            2508px, 1692px,
+            232px, 84px,
+            2048px);
+    }
+}
+
+.ipad-flat-horizontal-small {
+    @include device(
+        img("ipad-flat-black-horizontal"),
+        0.40,
+        2508px, 1692px,
+        232px, 84px,
+        2048px);
+}

@@ -1,0 +1,239 @@
+.portfolio-page
+{
+
+$teal-color: #099;
+$preamble-color: #cd673a;
+$rhapsody-color: #3c4854;
+$its-color: #bb942f;
+
+.project {
+    &.teal .intro {
+        background: $teal-color;
+    }
+    &.preamble .intro {
+        background: $preamble-color;
+        @media #{$small-only} {
+            .details {
+                display: none;
+            }
+        }
+    }
+    &.rhapsody .intro {
+        background: lighten($rhapsody-color, 15%);
+        .device-container .v-center-container {
+            float: right;
+            margin-right: 1rem;
+        }
+    }
+    &.its .intro {
+        background: $its-color;
+        .description {
+            padding-top: 0;
+            // @extend .medium-6; //override
+        }
+    }
+
+    & > .description {
+        max-width: $content-width;
+        border-top: 0.2rem solid $off-white;
+    }
+
+    & > h1 {
+        font-size: 100%;
+        letter-spacing: 0;
+        .name {
+            display: inline;
+        }
+        small {
+            letter-spacing: -0.06rem;
+            line-height: 1.4;
+            color: $main-color;
+            max-width: 750px;
+            font-size: 3rem;
+            font-weight: 700;
+            padding-bottom: 1rem;
+            margin-top: 1.5rem;
+        }
+    }
+
+    @media #{$small-only} {
+        & > .description, & > h1 {
+            @include grid-row();
+            padding: 1rem;
+        }
+    }
+
+    @media #{$medium-up} {
+        & > h1 {
+            margin: 4rem 0 0 0;
+        }
+        & > .description {
+            padding: 2rem 0;
+        }
+    }
+
+    .logo {
+        height: 3rem; // we want the logo to vertically align with the text
+    }
+
+}
+
+.product-shot {
+    overflow: hidden;
+    .description, .device-container {
+        @media #{$medium-up} {
+            padding-top: 4rem;
+        }
+    }
+    > .content, .intro > .content {
+        @include grid-row();
+        position: relative;
+        height: 100%;
+        @media #{$row-width-down} {
+            padding-left: $slide-arrow-width;
+            padding-right: $slide-arrow-width;
+        }
+    }
+
+    .device-container {
+        @extend .medium-5;
+        @extend .columns;
+        height: 100%;
+        @media #{$small-only} {
+            .device {
+                margin: 0 auto;
+                width: 60%;
+            }
+        }
+    }
+    .description {
+        @extend .medium-7;
+        @extend .columns;
+        max-width: $content-width;
+        height: 100%;
+    }
+}
+
+.h-center {
+    margin: 0 auto;
+    max-width: 40rem;
+    height: 40rem;
+    background: white;
+    padding: 2rem;
+    border-radius: 999px;
+    overflow: overlay;
+}
+
+.intro {
+    @media #{$small-only} {
+        .device-container {
+            display: none;
+        }
+        .intro-device-container, .intro-wide-device-container {
+            // max-width: 22rem;
+            height: 0;
+            width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 0;
+            float: none;
+            opacity: 0.1;
+            img {
+                width: 100%;
+            }
+        }
+        .intro-wide-device-container {
+            width: 200%;
+        }
+        .description {  
+            text-align: center;
+            padding: 0 1rem;
+            max-width: 22rem;
+            margin-left: auto;
+            margin-right: auto;
+            float: none;
+        }
+    }
+    @media #{$medium-up} {
+        .intro-device-container, .intro-wide-device-container {
+            display: none;
+        }
+    }
+    color: white;
+    height: 100%;
+    .description {
+        max-width: none;
+        .details {
+            margin-top: 3rem;
+            max-width: $content-width;
+            opacity: 0.6;
+            ul {
+                margin-left: 0;
+            }
+            li {
+                list-style: none;
+                margin-left: 0;
+                border-bottom: 1px solid rgba(white, 0.4);
+                line-height: 2rem;
+            }
+            li:last-child {
+                border-bottom: none;
+            }
+        }
+    }
+    .name {
+        // margin-top: 1rem;
+        font-weight: 400;
+        font-style: italic;
+        margin-bottom: 0.5rem;
+    }
+    .teaser {
+        font-size: 2rem;
+        @media #{$small-only} {
+            font-size: 1.5rem;
+        }
+        @media #{$medium-up} {
+            padding-right: 1rem;
+        }
+        @media #{$large-up} {
+            font-size: 3rem;
+        }
+        line-height: 1.25;
+        font-weight: 700;
+        // margin: 8rem 0 -14rem;
+        // color: $teal-color;
+        max-width: 45rem;
+    }
+}
+
+.its.project {
+    h2 {
+        @media #{$medium-up} {
+            margin-top: 4rem;
+        }
+        // text-align: center;
+    }
+    .device {
+        margin: 0rem auto;
+    }
+    .description {
+        @extend .medium-12; //override
+    }
+}
+
+.teal.project, .preamble.project {
+    @media #{$row-width-down} and (min-width:#{upper-bound($small-range)}) {
+        .device-container .v-center-container {
+            float: right;
+            margin-right: 1rem;
+        }
+    }
+}
+
+.orbit-bullets-container {
+    margin-top: -3rem;
+    position: relative;
+    z-index: 2000;
+}
+
+} // end portfolio-page

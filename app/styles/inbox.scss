@@ -1,0 +1,171 @@
+@import "foundation/components/grid";
+@import "core";
+
+// *************************************
+//
+//   Inbox
+//   -> CSS added by people who do not
+//      actively maintain the CSS
+//
+// *************************************
+
+// Inbox CSS here
+
+.project-menu {
+    @include grid-row();
+    // position: fixed;
+    // top: 0;
+    width: 100%;
+    background: $off-white;
+    // border-top: 0.2rem solid $off-white;
+    border-bottom: 0.2rem solid $main-color;
+    z-index: 2000;
+    .content {
+        margin: 0 auto;
+    }
+    ul {
+        margin: 0;
+    }
+    li {
+        display: inline-block;
+        position: relative;
+        list-style: none;
+        padding: 1rem;
+        // border-right: 0.2rem solid $off-white;
+        &:last-child {
+            margin-right: 0;
+            // border-right: 0;
+        }
+        a {
+            color: $main-color;
+        }
+        a.active:after {
+            content: "";
+            $size: 0.8rem;
+            @include css-triangle($size, $main-color, up);
+            bottom: 0;
+            // margin-bottom: -0.5rem;
+            position: absolute;
+            left: 50%;
+            margin-left: -$size/2;
+        }
+    }
+}
+
+#content {
+    text-rendering: optimizeLegibility;
+
+     #content-body {
+        // font-size: 1.3125em;
+        // letter-spacing: 0.01rem;
+        // line-height: 1.5;
+        > section, > p, > ul, > hr, > h1, > h2, > h3, > h4, > h5, > h6 {
+            @extend .centered-block;
+            li {
+                margin-left: 1.2rem;
+            }
+         }
+     }
+
+     #content-body-text-test {
+        @include grid-row();
+        max-width: $content-width;
+        padding: 1rem;
+     }
+
+}
+
+.orbit-container {
+    .orbit-slides-container img.logo {
+        display: inline;
+    }
+
+    .orbit-prev {
+        background-image: url(../img/arrow-left.png);
+        background-position: 40% 50%;
+    }
+
+    .orbit-next {
+        background-image: url(../img/arrow-right.png);
+        background-position: 60% 50%;
+        &.big-arrow {
+            @extend .blink;
+            width: $slide-arrow-width + 1rem;
+            &:hover {
+                -webkit-animation-name: none;
+                -webkit-animation-duration: 0;
+            }
+        }
+    }
+
+    .orbit-prev, .orbit-next {
+        -webkit-transition-property: width, opacity;
+        -webkit-transition-duration: 0.4s;
+        -webkit-transition-timing-function: ease-in-out;
+
+        background-color: rgba($main-color, 0.8);
+        background-repeat: no-repeat;
+        background-size: 1rem;
+        // height: 100%;
+        // top: 0;
+        // margin-top: 0;
+        width: $slide-arrow-width;
+        padding: 4rem 0;
+        span {
+            display: none;
+        }
+        &:hover {
+            background-color: $main-color;
+        }
+        &.hidden {
+            opacity: 0;
+        }
+    }
+
+    .orbit-bullets-container {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+    }
+
+    .orbit-bullets li {
+        background: rgba($main-color, 0.4);
+        cursor: pointer;
+    }
+
+    .orbit-bullets li.active {
+        background: rgba($main-color, 0.8);
+    }
+}
+
+.touch {
+    .orbit-container .orbit-bullets {
+        display: block !important;
+    }
+
+    .product-shot {
+        > .content, .intro > .content {
+            @media #{$small-only} {
+                padding-left: 0 !important;
+                padding-right: 0 !important;
+            }
+        }
+    }
+}
+
+
+.background-section {
+    // border-right: 20px solid red;
+    position: fixed;
+    top: 0;
+    z-index: 4000;
+}
+
+.foreground-section {
+    // border-right: 20px solid blue;
+    background-color: white;
+    z-index: 5000;
+    box-shadow: 0px 10px 80px rgba(0, 0, 0, .4);
+}
+
+

@@ -1,0 +1,187 @@
+@import "foundation/components/grid";
+@import "core";
+
+// Modules in this context refer to any unit of style that can be found across multiple pages. Most of your styles should be found here. This draws from the OOCSS idea of separating everything into reusable chunks, making it second-nature if you're familiar with that method.
+
+// Examples of Modules
+// Here are some commonly occurring examples of modules:
+
+// Modals
+// Buttons
+// Tooltips
+// Navigation
+// Re-appearing chunks of content, like a user info card or sidebar
+
+// https://dvcs.w3.org/hg/FXTF/raw-file/tip/filters/index.html
+//
+// grayscale      ex: filter: grayscale(100%);
+// sepia          ex: filter: sepia(100%);
+// saturate       ex: filter: saturate(0%);
+// hue-rotate     ex: filter: hue-rotate(45deg);
+// invert         ex: filter: invert(100%);
+// brightness     ex: filter: brightness(15%);
+// contrast       ex: filter: contrast(200%);
+// blur           ex: filter: blur(2px);
+
+.unstyled-ul-list {
+    background: red;
+    li {
+        list-style: none;
+        display: inline;
+    }
+}
+
+.hero {
+    @include grid-row();
+    h1 {
+        max-width: 40rem;
+        font-size: 3rem;
+        font-weight: 700;
+        letter-spacing: -0.2;
+        line-height: 1.25;
+        // background: black;
+        // color: white;
+    }
+}
+
+.header2 {
+    .content {
+        @include grid-row();
+        position: relative;
+    }
+    top: 0;
+    width: 100%;
+    position: fixed;
+    padding: 0;
+    margin: 0;
+    background: rgba($main-color, 0.4);
+    // background: -webkit-linear-gradient(rgba($main-color, 0.6), rgba($main-color, 0.2));
+    // padding-bottom: 2rem;
+    // border-bottom: 1px solid rgba(white, 0.5);
+    z-index: 6000;
+    a {
+        color: white;
+    }
+    .title {
+        // padding: 1rem;
+        margin: 1rem;
+        font-weight: 400;
+        // font-size: 1rem;
+        display: inline-block;
+    }
+    .sub-title {
+        display: inline-block;
+        opacity: 0.8;
+        font-weight: 200;
+    }
+    nav {
+        position: absolute;
+        margin: 1rem;
+        top: 0;
+        right: 0;
+        ul {
+            margin: 0;
+            line-height: inherit; // override foundation default
+        }
+        li {
+            list-style: none;
+            display: inline;
+        }
+        li:last-child a {
+            margin-right: 0;
+        }
+        a {
+            font-weight: 400;
+            color: $main-color;
+            margin-right: 0.5rem;
+            color: white;
+            padding-bottom: 0.1rem; // for border to not be too close
+            border-bottom: 1px solid;
+            &.active {
+                border-bottom: 1px solid;
+            }
+            &:hover {
+                border-bottom: 1px solid;
+                border-color: rgba(white, 0.5);
+                // opacity: 0.8;
+            }
+        }
+        .description {
+            display: none;
+        }
+    }
+}
+
+.header {
+    // @include grid-row();
+    position: relative;
+    // border-bottom: 0.2rem solid $main-color;
+    .title {
+        padding: 4rem 4rem 1rem;
+        small {
+            font-weight: 500;
+        }
+    }
+    nav {
+        position: absolute;
+        right: 4rem;
+        bottom: 1.75rem;
+        ul {
+            margin: 0;
+        }
+        li {
+            list-style: none;
+            display: inline;
+        }
+        // li:after {
+        //     // content: "\2022";
+        //     content: "";
+        //     margin: 0 0.5rem;
+        // }
+        // li:last-child:after {
+        //     display: none;
+        // }
+        li:last-child a {
+            margin-right: 0;
+        }
+        a {
+            font-weight: 700;
+            border-bottom: 1px dotted $main-color;
+            color: $main-color;
+            margin-right: 0.5rem;
+            &.active {
+                border-bottom-style: solid;
+            }
+            &:hover {
+                color: $primary-color;
+            }
+        }
+        .description {
+            display: none;
+        }
+    }
+}
+
+.sticky-contact.button {
+    top: 0;
+    right: 2rem;
+    position: fixed;
+    z-index: 1000;
+}
+
+footer.footer {
+    @include grid-row();
+    // background: black;
+    // color: white;
+    // border-top: 0.2rem solid $main-color;
+    padding: 2rem 1rem 1rem;
+    // margin-top: 6rem;
+    .contact.button {
+        width: 100%;
+        padding: 2rem 0;
+        font-size: 4rem;
+        font-weight: 200 !important;
+        // color: black;
+        // background: white;
+    }
+}

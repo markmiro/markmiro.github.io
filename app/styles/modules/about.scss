@@ -1,0 +1,80 @@
+.why {
+    @include grid-row();
+    padding: 0 $min-page-padding;
+    margin-top: 6rem;  
+    margin-bottom: 4rem;
+    .stuff {
+        max-width: $content-width;
+    }
+}
+
+.about-me {
+    @include grid-row();
+
+    padding: 0 1rem;
+    margin-bottom: 8rem;
+
+    .skill-column {
+        @extend .medium-3;
+        @extend .columns;
+        &:first-child {
+            padding-left: 0;
+            background: red;
+        }
+        // padding-left: 0;
+        ul {
+            border-left: 1px solid $off-white;
+            font-weight: normal;
+            margin: 0;
+            li {
+                list-style: none;
+                margin-left: 1rem;
+            }
+        }
+    }
+
+    h4 {
+        @extend .big-thin-text;
+    }
+
+    .more-skills {
+        margin-top: 2rem;
+        ul {
+            margin: 0;
+        }
+        li {
+            display: inline;
+            // list-style: none;
+            // border-left: 1px solid $light-gray;
+            // padding: 0 1rem;
+            &:after {
+                content: "\2022";
+                font-weight: 100;
+                line-height: 1;
+                color: $light-gray;
+                padding: 0 0.5rem;
+            }
+            &:last-child:after {
+                content: "";
+            }
+        }
+    }
+
+    .we-will-get-along {
+        ul {
+            margin: 0;
+        }
+        li {
+            @extend .big-thin-text;
+            list-style: none;
+            border-bottom: 1px solid $off-white;
+            &:last-child {
+                border-bottom: 0;
+            }
+        }
+        margin-bottom: 4rem;
+    }
+    hr {
+        margin: 4rem 0;
+    }
+}
