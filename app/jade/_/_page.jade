@@ -19,8 +19,17 @@ mixin page(name, title)
       //if lt IE 9
         script(src='http://html5shiv.googlecode.com/svn/trunk/html5.js')
 
-      // build:js /scripts/modernizr.min.js
+      // build:js /scripts/vendor.min.js
       script(src='/bower_components/modernizr/modernizr.js')
+      script(src='/bower_components/jquery/dist/jquery.js')
+      script(src='/bower_components/jquery.scrollTo/jquery.scrollTo.js')
+      script(src='/bower_components/foundation/js/foundation.js')
+      //- script(src='../node_modules/gulp-jade/node_modules/jade/runtime.js')
+      // endbuild
+
+      // build:js /scripts/main.min.js
+      script(src='/scripts/main.js')
+      script(src='/scripts/main-helper.js')
       // endbuild
 
     body
@@ -34,17 +43,5 @@ mixin page(name, title)
           | &nbsp; Mark Miro
 
       //- a(href='mailto:contact@markmiro.com').button.sticky-contact Contact Me
-
-      // build:js /scripts/vendor.min.js
-      script(src='/bower_components/jquery/dist/jquery.js')
-      script(src='/bower_components/jquery.scrollTo/jquery.scrollTo.js')
-      script(src='/bower_components/foundation/js/foundation.js')
-      //- script(src='../node_modules/gulp-jade/node_modules/jade/runtime.js')
-      // endbuild
-
-      // build:js /scripts/main.min.js
-      script(src='/scripts/main.js')
-      script(src='/scripts/main-helper.js')
-      // endbuild
 
       //- include _analytics
