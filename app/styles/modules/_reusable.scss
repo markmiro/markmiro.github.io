@@ -2,10 +2,10 @@
 
 
 @function img($name) {
-    @return url(../img/#{$name}.png);
+    @return url(/images/#{$name}.png);
 }
 
-@mixin filter($filter-type,$filter-amount) { 
+@mixin filter($filter-type,$filter-amount) {
   -webkit-filter: $filter-type+unquote('(#{$filter-amount})');
   -moz-filter: $filter-type+unquote('(#{$filter-amount})');
   -ms-filter: $filter-type+unquote('(#{$filter-amount})');
@@ -32,7 +32,7 @@
     // -webkit-transition: opacity 0.3s ease, max-height 0.3s ease, -webkit-transform 0.3 ease;
     @include transform(translateZ(0) translateY(-10px));
     // -webkit-transform: perspective(800px) translateZ(-300px) rotateX(30deg);
-    opacity: 0; 
+    opacity: 0;
     height: 0;
     // max-height: 0;
     overflow: hidden;
@@ -64,7 +64,7 @@
     // }
 }
 /* The element to be centered, can
-   also be of any width and height */ 
+   also be of any width and height */
 .v-center {
     display: table-cell;
     vertical-align: middle;

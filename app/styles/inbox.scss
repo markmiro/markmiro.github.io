@@ -81,12 +81,12 @@
     }
 
     .orbit-prev {
-        background-image: url(../img/arrow-left.png);
+        background-image: url(/images/arrow-left.png);
         background-position: 40% 50%;
     }
 
     .orbit-next {
-        background-image: url(../img/arrow-right.png);
+        background-image: url(/images/arrow-right.png);
         background-position: 60% 50%;
         &.big-arrow {
             @extend .blink;
