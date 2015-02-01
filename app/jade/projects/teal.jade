@@ -1,0 +1,55 @@
+include ../_/_mixins
+
+.teal.project.sections(data-orbit)
+  +intro-shot('teal')
+    +intro-vertical-iphone('teal-phonegap.png')
+    +description
+      .name Teal (Built at Ask Ziggy)
+      .teaser Can a hotel booking app push iOS to it's limit?
+  +product-shot()
+    +vertical-iphone('teal-phonegap3.gif')
+    +description()
+      h2 A web app that passes<br>for native
+      p.
+        The app feels very native, though none of the UI is native. In fact, the entire thing was built using web technologies.
+      p.
+        There were very few robust, and fast tools to build upon when I built the app. The screen transitions and all the UI was coded from scratch.
+      p.
+        Building iPhone apps with HTML5, CSS, and JavaScript is several times more difficult than doing the same thing for desktop web browsers.
+  +product-shot()
+    +vertical-iphone('teal-phonegap4.gif')
+    +description()
+      h2 Gray, white, gray, white...
+      p.
+        A unique motif throughout the app is the alternating white and gray sections. No popular apps at the moment of development used alternating stripes to brand the app.
+      p.
+        The motif can be used for progress bars, or sections or disabled buttons.
+  +product-shot()
+    +vertical-iphone('teal-phonegap5.gif')
+    +description()
+      h2 Avoiding the<br>uncanny valley
+      p.
+        The <em>uncanny valley</em> describes a computer generated rendering of a person. Have you ever looked at a realistic 3D rendering of a human face, but felt something was off about it? That's an image that falls in the uncanny valley.
+      p. I wanted to avoid the <em>uncanny valley</em> by making interface components that don't look like anything you would see on iOS or Android, but still behave like native controls.
+  +product-shot()
+    .v-center-container.centered-block
+      .v-center
+        .row
+          .medium-12.columns
+            h2 Built with...
+        .row
+          .medium-6.columns
+            ul
+              li PhoneGap
+              li jQuery
+              li Backbone
+              li Underscore
+              li Require.js
+              li Ruby
+          .medium-6.columns
+            ul
+              li HTML5, CSS
+              li Sass
+              li HAML
+              li Photoshop
+              li Illustrator

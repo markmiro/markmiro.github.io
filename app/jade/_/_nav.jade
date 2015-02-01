@@ -6,8 +6,17 @@ mixin link(name)
 
 mixin nav(name)
   - var CURRENT_PAGE = name
-  nav
-    p= 'CURRENT_PAGE: ' + CURRENT_PAGE
-    ul
-      li: +link('') Home
-      li: +link('about') About
+  header.header2
+    .content
+      a(href='/')
+        .title Mark Miro
+        .sub-title.show-for-medium-only Developer / designer
+        .sub-title.show-for-large-up Front-end web app developer / designer
+      nav
+        ul
+          li: +link('') Projects
+          li: +link('labs') Labs
+          li: +link('about') About
+          li: +link('mailto:contact@markmiro.com') Contact Me
+
+

@@ -13,13 +13,38 @@ mixin page(name, title)
       include _meta
 
       //--Page styles
+      link(href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400')
       link(rel='stylesheet', href='/styles/main.css')
+
+      //if lt IE 9
+        script(src='http://html5shiv.googlecode.com/svn/trunk/html5.js')
+
+      // build:js /scripts/modernizr.min.js
+      script(src='/bower_components/modernizr/modernizr.js')
+      // endbuild
 
     body
       +nav(name)
-      block
+      #content(class=name+'-page')
+        block
+      footer.footer
+        p
+          | &copy;
+          = new Date().getFullYear()
+          | &nbsp; Mark Miro
+
+      //- a(href='mailto:contact@markmiro.com').button.sticky-contact Contact Me
+
+      // build:js /scripts/vendor.min.js
+      script(src='/bower_components/jquery/dist/jquery.js')
+      script(src='/bower_components/jquery.scrollTo/jquery.scrollTo.js')
+      script(src='/bower_components/foundation/js/foundation.js')
+      //- script(src='../node_modules/grunt-contrib-jade/node_modules/jade/runtime.js')
+      // endbuild
+
       // build:js /scripts/main.min.js
       script(src='/scripts/main.js')
       script(src='/scripts/main-helper.js')
       // endbuild
+
       //- include _analytics

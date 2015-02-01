@@ -1,0 +1,57 @@
+- var DEBUG = true
+
+mixin intro-shot(project_name)
+  section.product-shot.intro
+    .content
+      if block
+        block
+
+mixin product-shot()
+  section.product-shot
+    .content
+      if block
+        block
+
+mixin more()
+  if block
+    .toggle-block
+      block
+  a.toggle-link more...
+
+mixin vertical-iphone(screenshot)
+  .device-container
+    .v-center-container
+      .v-center
+        .device.iphone-5s-flat-vertical
+          img(src='img/'+screenshot)
+
+mixin intro-vertical-iphone(screenshot)
+  +vertical-iphone(screenshot)
+  .intro-device-container.visible-for-small-only
+    img(src='img/'+screenshot)
+
+
+mixin horizontal-ipad(screenshot)
+  .device-container
+    .v-center-container
+      .v-center
+        .device.ipad-flat-horizontal
+          img(src='img/'+screenshot)
+
+mixin intro-horizontal-ipad(screenshot)
+  +horizontal-ipad(screenshot)
+  .intro-wide-device-container.visible-for-small-only
+    img(src='img/'+screenshot)
+
+mixin horizontal-ipad-small(screenshot)
+  .device.ipad-flat-horizontal-small
+    img(src='img/'+screenshot)
+
+mixin project-logo(logo)
+  img.logo(src='img/'+logo)
+
+mixin description()
+  .description
+    .v-center-container
+      .v-center
+        block

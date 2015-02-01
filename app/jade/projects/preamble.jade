@@ -1,0 +1,49 @@
+include ../_/_mixins
+
+.preamble.project.sections(data-orbit)
+  +intro-shot('preamble')
+    +intro-vertical-iphone('preamble.png')
+    +description
+      .name Preamble (Built at the Launch Hackathon)
+      .teaser What does the résumé of the future look like?
+      .details
+        p.
+          The main idea was to build a slide deck that acts as a clutter-free résumé for mobile
+        ul
+          li Sean Ho (idea, presenter)
+          li Yaadhav Raaj (backend)
+          li Nicki Winstead (logo)
+          li Juan Juan (ideation, helped with odds and ends)
+          li Me (JavaScript development, design)
+  +product-shot()
+    +vertical-iphone('preamble1.gif')
+    +description()
+      h2 WYSIWYG on your phone?
+      p.
+        This is not the first time you've seen a WYSIWYG user interface, but phones are special because there's very little room for UI. To top it off, I attempted this risk during a hackathon. The end result was a simple, clean, and intuitive interface.
+      p.
+        I decided on using a WYSIWYG UI so that I did not have to create two user interfaces. I don't know why more of these types of user interfaces don't exist on the internet.
+  +product-shot()
+    +vertical-iphone('preamble2.gif')
+    +description()
+      h2 Bullets are useful. Let's use them everywhere
+      p.
+        Since most résumés are essentially bullet points, this makes for a simple, flexible system to allow anyone to express themselves professionally. Users can also add and remove slides.
+
+      p. New slides are automatically titled as Skills, Experience, or Education to help users organize their content.
+  +product-shot()
+    +vertical-iphone('preamble5.gif')
+    +description()
+      h2 Who needs arrow buttons?
+      p.
+        Users can navigate between the slides by swiping their finger from right to left on the screen.
+  +product-shot()
+    +vertical-iphone('preamble4.gif')
+    +description()
+      h2 One-touch<br>instant preview
+      p.
+        Once you press the "Done" button you can see how everyone else on the internet will see your résumé deck. The only difference is that they won't see an edit button.
+      p. The "Request a Meeting" link on the top of each slide acts as a call to action. Pressing it takes you to the contact page.
+  // +vertical-iphone('preamble4.gif')
+    p.
+      The "Request a Meeting" link on the top of each slide acts as a call to action. Pressing it takes you to the contact page.

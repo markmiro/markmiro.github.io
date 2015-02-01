@@ -1,0 +1,49 @@
+include ../_/_mixins
+
+.its.project.sections(data-orbit)
+  +intro-shot('its')
+    //- +horizontal-ipad('rhapsody.gif')
+    +description()
+      .name ITS Website (Built at UC Davis)
+      .teaser Zero-emission web design?
+  +product-shot()
+    .v-center-container
+      .v-center
+        .row
+          .medium-12.columns
+            h2 Before
+            .device
+              img.browser-screenshot(src='img/its-website-old.png')
+  +product-shot()
+    .v-center-container
+      .v-center
+        .row
+          .medium-12.columns
+            h2 After
+            .device
+              img.browser-screenshot(src='img/its-website-new.png')
+  +product-shot()
+    .v-center-container.centered-block
+      .v-center
+        .row
+          .description
+            h2(style='margin-top:0') The role I played in the redesign
+            p.
+              The old website was in need of attention. The entire website was hand-coded in PHP. We wanted to reorganize and update the content from the old website, create a new website with a better look, and have a system that is easy for non-programmers to maintain. I took the technical lead and the project was a big success.
+            p The screenshot shown is a different website that uses the same template that the old ITS website used.
+
+  //- h1
+  //-   .name ITS Website (Built at UC Davis)
+  //-   small Porting an old static website<br>to an advanced CMS-driven one
+  //- .description
+  //-   p.
+  //-     The old website was in need of attention. The entire website was hand-coded in PHP. We wanted to reorganize and update the content from the old website, create a new website with a better look, and have a system that is easy for non-programmers to maintain. I took the technical lead and the project was a big success.
+  //- +product-shot()
+  //-   h3 Before
+  //-   p The screenshot shown is a different website that uses the same template that the old ITS website used.
+  //-   img.browser-screenshot(src='img/its-website-old.png')
+  //-   br
+  //-   br
+  //-   br
+  //-   h3 After
+  //-   img.browser-screenshot(src='img/its-website-new.png')

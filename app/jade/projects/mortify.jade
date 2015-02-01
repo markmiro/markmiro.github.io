@@ -1,0 +1,23 @@
+include ../_/_mixins
+
+.project
+  h1
+    +project-logo('mortify-logo.png')
+    .name Mortify (Built at the Berkeley Health Hackathon)
+    small
+       | Skiing is as deadly as Ecstasy*
+  .description
+    p.
+      * The statistic above is designed to turn heads, but it highlights a problem when we compare risk. We know that both skiing and Ecstasy are dangerous, but the statistic about quantifies it. Each activity will increase your risk of death by about 0.5 micromorts. The news media constantly bombards us about unsafe cars, unsafe pigments used in toys, flamable clothes, and so on.
+    p.
+      We can't just avoid all risk. We need to be smart about it, which is what the micromort unit is for. We can quantify the risk of sudden death between almost any two risky activities. It's not perfect, but the unit finally allows us to make informed decisions about risk.
+    p.
+      What's funny is that this was made for a health hackathon in Berkeley. If anything, this app is not designed to make people any healthier. Our goal was to raise awareness about the relative risks of different activities.
+    p
+      | What came out of the experiment is a fun and informative app. Data was sourced from&nbsp;
+      a(href='http://en.wikipedia.org/wiki/Micromort') Wikipedia&nbsp;
+      | and other sources.
+    ul
+      li Kevin Nygen (iOS development)
+      li Sean Ho (Math crunching, presenter)
+      li Me (Design + some iOS help)

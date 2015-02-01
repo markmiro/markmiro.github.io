@@ -1,4 +1,76 @@
 include _/_page
+include _/_mixins
 
 +page('about', 'About')
-  p This is the about page.
+
+  .why
+    .stuff
+      h2 About
+      p.
+        I'm a front-end developer who has built innovative functional prototypes for Intel, Dell, Lenovo, etc... These prototypes incorporate the latest gesture (think Kinect), touch, and voice recognition technology. I also have a patent with my name on it (in the works).
+      +more()
+        h4 Learn one thing and do it well
+          small So why am I doing two again?
+        p.
+          Great innovations happen when knowledge from one discipline gets carried over to another. In my case I've decided to focus on fusing code and design. This, I was able to get good at by being a basement code monkey since middle school and practicing both crafts.
+        p.
+          Everything else was secondary, so naturally I lacked royally in the social relm. Don't worry; I adjusted later in life. So, if you're looking for a sharp non-tool who can code and design, I'm your guy.
+        h4.
+          What does it really mean to be a coder / designer?
+        p.
+          It means I need to be somewhat particular about what I want to be good at. My goal is not to be the proverbial jack of all trades. I'm skilled in Photoshop and Illustrator. But that doesn't mean I'll be the best at poster or logo design.
+        p.
+          On the other hand, just becase I can code doesn't mean I'm an expert in databases and computer security. I know the basics.
+        h4.
+          So what <em>am</em> I good at?
+        p.
+           I can anticipate where users will have problems using your app. I can also come up with non-confusing alternatives, and&mdash;importantly&mdash;implement them. I can see past how an app looks, and know how to make it functional. Simultaneously, I'm naturally detail oriented.
+        p.
+          One more thing... I like experimental user interfaces. Most of them confuse users or scare them away from a product (think Windows 8), but once in a while something like the iPod click wheel comes along and changes everything. I like to explore those edge cases, and being able to code means I can test my ideas. So what do you get by working with me? Innovation at the speed of thought. Believe the hype.
+  .about-me
+    .we-will-get-along
+      h3.
+        My favorite companies / clients...
+      ul
+        li Are building customer-facing products
+        li Need innovative user interfaces
+        li Love simple, flat design
+        li Are strong proponents of visual consistency
+        li Appreciate clean code
+        li Do market research before starting work on a solution
+    .skills
+      h3 Core skills
+      .skill-column
+        h4 JS
+        ul
+          li jQuery
+          li Backbone
+          li Require.js
+          li Grunt
+          li Bower
+          li Node
+      .skill-column
+        h4 CSS
+        ul
+          li Responsive design
+          li Media queries
+          li Sass
+          li LESS
+      .skill-column
+        h4 HTML5
+        ul
+          li Jade
+          li HAML
+      .skill-column
+    .clearfix
+    .more-skills
+      h3 Additional skills
+      ul
+        li Objective-C
+        li C#
+        li Java
+        li ActionScript 3
+        li Ruby
+        li Python
+        li PHP
+        li Regular Expressions
