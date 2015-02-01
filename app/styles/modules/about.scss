@@ -1,7 +1,10 @@
+@import "foundation/components/grid";
+@import "../core";
+
 .why {
     @include grid-row();
     padding: 0 $min-page-padding;
-    margin-top: 6rem;  
+    margin-top: 6rem;
     margin-bottom: 4rem;
     .stuff {
         max-width: $content-width;

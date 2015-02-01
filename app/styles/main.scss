@@ -1,0 +1,18 @@
+// @import "bourbon";  // Use this for its functions and addons
+@import "settings";
+@import "foundation";
+// $include-html-classes: true;
+// @import "foundation/components/buttons";
+// @import "components/components";
+
+body {
+  font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+h1 {
+  // @include cover;
+  background: red;
+}
+
+.button {
+  // @include button;
+}
